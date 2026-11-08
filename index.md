@@ -13,7 +13,7 @@ Teras Ceki adalah permainan kartu Ceki yang dimainkan secara offline melawan bot
 
 - Tidak ada akun, tidak ada login, tidak ada iklan.
 - Permainan dan pengaturan Anda hanya disimpan di ponsel Anda.
-- Satu-satunya data yang dikirim keluar adalah **laporan error (crash report)**, supaya kami bisa memperbaiki aplikasi. Anda bisa mematikannya kapan saja di **Pengaturan → Kirim laporan error**.
+- Satu-satunya data yang dikirim keluar adalah **laporan error (crash report)** beserta catatan singkat setiap kali aplikasi dibuka, supaya kami bisa memperbaiki aplikasi. Anda bisa mematikan keduanya kapan saja di **Pengaturan → Kirim laporan error**.
 
 ## Data yang dikirim: laporan error
 
@@ -25,11 +25,13 @@ Kalau aplikasi mengalami error atau tertutup sendiri, aplikasi mengirim laporan 
 - waktu terjadinya error;
 - ID instalasi acak yang dibuat oleh Crashlytics. ID ini tidak berisi nama, nomor telepon, email, atau lokasi Anda, dan berganti kalau aplikasi dihapus lalu dipasang lagi.
 
-Laporan error **tidak** berisi kartu, skor, atau isi permainan Anda.
+Selain itu, setiap kali aplikasi dibuka, Crashlytics mengirim **catatan sesi** singkat: ID sesi acak, waktu, versi aplikasi, model ponsel, dan versi sistem operasi. Catatan ini hanya dipakai untuk menghitung berapa banyak sesi yang berjalan tanpa error.
 
-Kami memakai laporan ini hanya untuk menemukan dan memperbaiki error. Kami tidak menjualnya, tidak membagikannya untuk iklan, dan tidak memakainya untuk mengenali siapa Anda.
+Laporan error dan catatan sesi **tidak** berisi kartu, skor, atau isi permainan Anda.
 
-Google menyimpan laporan error selama 90 hari, lalu menghapusnya. Data ini dapat diproses di server Google di luar Indonesia. Cara Google menangani data Firebase dijelaskan di <https://firebase.google.com/support/privacy>.
+Kami memakai data ini hanya untuk menemukan dan memperbaiki error. Kami tidak menjualnya, tidak membagikannya untuk iklan, dan tidak memakainya untuk mengenali siapa Anda.
+
+Google menyimpan laporan error selama 90 hari, lalu menghapusnya; catatan sesi disimpan sesuai ketentuan Firebase. Data ini dapat diproses di server Google di luar Indonesia. Cara Google menangani data Firebase dijelaskan di <https://firebase.google.com/support/privacy>.
 
 ## Kalau Anda ikut uji coba lewat TestFlight (iPhone)
 
@@ -47,7 +49,7 @@ Teras Ceki tidak meminta nama, umur, atau data pribadi apa pun dari pemainnya, t
 
 Anda bisa:
 
-- mematikan laporan error di **Pengaturan → Kirim laporan error**; laporan berikutnya tidak akan dikirim;
+- mematikan laporan error di **Pengaturan → Kirim laporan error**; laporan dan catatan sesi berikutnya tidak akan dikirim;
 - meminta kami menghapus laporan error yang terkait dengan ponsel Anda dengan menghubungi kami di alamat di bawah.
 
 ## Perubahan
